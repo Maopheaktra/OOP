@@ -7,5 +7,4 @@ export class Passenger extends Person {
         this.passengerID = passengerID;
         gender:Gender
     }
-    getPassengerName() { return this.getName}
 }
