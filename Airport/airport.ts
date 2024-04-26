@@ -1,4 +1,6 @@
-class Airport{
+import { Gate } from "./Gate";
+import { Route } from "./route";
+export class Airport{
     constructor(
         private name: string,
         private gate: Gate[] = [],
