@@ -8,3 +8,4 @@ export class Passenger extends Person {
         gender:Gender
     }
 }
+
