@@ -1,4 +1,4 @@
-class Airport{
+export class Airport{
     constructor(
         private name:string, 
         private gate:Gate[]=[],
