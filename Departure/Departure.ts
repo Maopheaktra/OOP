@@ -3,4 +3,4 @@ export class Departure{
         this.country= country
         this.city = city
     }
-}
+}                                                                                                                                                                                                                                                                                       
