@@ -1,4 +1,4 @@
-import { Meal } from "./meal";
+import { Meal } from "../Flight/meal";
 import { Baggages } from "./bagages";
 export class Booking{
     bookingID: string;

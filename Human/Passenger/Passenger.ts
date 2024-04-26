@@ -5,7 +5,7 @@ export class Passenger extends Person {
     constructor(passengerID: string, firstName: string, lastName: string, email: string, phone: number, gender: Gender) {
         super(firstName, lastName, email, phone)
         this.passengerID = passengerID;
-        gender:Gender
+        gender = gender
     }
 }
 
