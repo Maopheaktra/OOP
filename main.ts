@@ -1,6 +1,7 @@
 // Import the employees the passenger
 
 import { Passenger } from "./src/Human/Passenger/Passenger";
+import { Gender } from "./src/Human/Person";
 
 
 
