@@ -1,7 +1,7 @@
 import { Gender } from "../Person";
-import { Pilot } from "./Pilot";
+import { crewMember, Employee } from "./employee";
 
-class CoPilot extends Pilot{
+class Chef extends Employee{
     constructor(
         EmployeeID:string, 
         salary: number, 
@@ -10,7 +10,7 @@ class CoPilot extends Pilot{
         lastName: string, 
         email: string, 
         phone: string, 
-        gender:Gender
+        gender:Gender,
 
     ){
         super (EmployeeID,salary,workHour,firstName,lastName,email,phone,gender);

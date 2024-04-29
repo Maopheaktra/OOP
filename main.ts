@@ -5,6 +5,7 @@ import { Seat } from "./src/Airline/Aeroplane/seat";
 
 
 
+import { Employee } from "./src/Human/Employee/employee";
 import { Passenger } from "./src/Human/Passenger/Passenger";
 import { Gender } from "./src/Human/Person";
 
