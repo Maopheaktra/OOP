@@ -12,7 +12,3 @@ export class Airlines{
 }
 
 
-let PM_Airline = new Airlines("PM_Airline");
-let Aeroplane1 = new Aeroplanes("PHN");
-PM_Airline.addAeroplane(Aeroplane1);
-console.log(PM_Airline);
