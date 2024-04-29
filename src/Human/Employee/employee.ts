@@ -10,7 +10,7 @@ export enum crewMember{
 export abstract class Employee extends Person{
     private EmployeeID : string;
     private salary: number = 0; //by default
-    private wordHour: number
+    private workHour: number
     constructor(
         EmployeeID : string,
         salary: number, 
