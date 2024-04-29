@@ -1,7 +1,7 @@
 import { Meal } from "../Flight/meal";
 import { Baggages } from "./bagages";
-import { Departure } from "../Departure/Departure";
-import { Passenger } from "../Person/Passenger/Passenger";
+import { Departure } from "../../Departure/Departure";
+import { Passenger } from "../../Human/Passenger/Passenger";
 
 
 
