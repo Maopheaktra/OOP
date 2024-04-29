@@ -1,8 +1,8 @@
-// {
-//   "compilerOptions": {
-//     "strictNullChecks": true,
-//     "composite": true,
-//     "outDir": "dist"
-//   },
-//   "include" : ["src/**/*"]
-// }
+{
+    "compilerOptions": {
+      "noImplicitAny": true,
+      "outDir": "dist"
+    },
+    "include": ["src/**/*", "src/main.ts"],
+    "exclude": ["node_modules"]
+  }
