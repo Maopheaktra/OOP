@@ -3,6 +3,6 @@
     "noImplicitAny": true,
     "outDir": "dist"
   },
-  "include": ["src/**/*", "main.ts"],
+  "include": ["src/**/*", "src/main.ts"],
   "exclude": ["node_modules"]
 }
