@@ -1,6 +1,13 @@
 import { person } from "../Person";
 
-export abstract class Employee extends person{
+enum crewMember{
+    FLIGHT_ATTENDANCE,
+    CABINCREW,
+    CHEF,
+
+}
+export abstract class Employee extends person {
+    private EmployeeID : string;
     private salary: number = 0; //by default
     private wordHour: number
     firstName : string
@@ -10,7 +17,7 @@ export abstract class Employee extends person{
         this.salary = salary;
         this.wordHour = workHour;
     }
-    getPassengerSalary(){
+    getPassengerSalary() {
         return this.salary;
     }
 }
