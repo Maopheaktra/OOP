@@ -30,6 +30,6 @@ export abstract class Employee extends Person{
         return this.salary;
     }
     addSalary(){
-        
+        this.salary = this.salary
     }
 }
