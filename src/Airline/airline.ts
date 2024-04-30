@@ -1,5 +1,7 @@
 import { Aeroplanes } from "./Aeroplane/aeroplane";
-import { Seat } from "./Aeroplane/seat";
+import { Flight } from "../BookingFlight/Flight/flight";
+import { Employee } from "../Human/Employee/employee";
+
 export class Airlines{
     private name: string
     private airplane: Aeroplanes[] = []
