@@ -2,7 +2,7 @@ import { Meal } from "../Flight/meal";
 import { Baggages } from "./bagages";
 import { Departure } from "../../Departure/Departure";
 import { Passenger } from "../../Human/Passenger/Passenger";
-
+import { Flight } from "../Flight/flight";
 
 
 export enum TypeTickets{
