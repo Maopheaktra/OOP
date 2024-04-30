@@ -1,3 +1,5 @@
+
+import { Departure } from "../../Departure/Departure";
 import { Gate } from "./Gate";
 import { Route } from "./route";
 export class Airport{
@@ -5,9 +7,11 @@ export class Airport{
         private name: string,
         private gate: Gate[] = [],
         private route: Route[] = [],
-        // private aeroplan: Airplane[] = []
+        private departure:Departure,
+        private  arrivalPlace : Departure,
     ){
         this.name = name;
+        
     }
     getName(){
         return this.name;
@@ -19,6 +23,7 @@ export class Airport{
         this.route.push(route);
     }
     // addAeroplan(aeroplane: Aeroplane) {
-        // this.aeroplan.push(aeroplane);
+    //     this.aeroplan.push(aeroplane);
+    // }
       
 }

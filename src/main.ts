@@ -1,13 +1,11 @@
 // Import the employees the passenger
-import { Airlines } from "./src/Airline/airline";
-import { Aeroplanes } from "./src/Airline/Aeroplane/aeroplane";
-import { Seat } from "./src/Airline/Aeroplane/seat";
+import { Airlines } from "./Airline/airline";
+import { Aeroplanes } from "./Airline/Aeroplane/aeroplane";
+import { Seat } from "./Airline/Aeroplane/seat";
 
-
-
-import { Employee } from "./src/Human/Employee/employee";
-import { Passenger } from "./src/Human/Passenger/Passenger";
-import { Gender } from "./src/Human/Person";
+import { Passenger } from "./Human/Passenger/Passenger";
+import { Employee }  from "./Human/Employee/employee";
+import { Gender } from "./Human/Person";
 
 
 
