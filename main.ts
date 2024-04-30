@@ -10,6 +10,7 @@ import { Passenger } from "./src/Human/Passenger/Passenger";
 import { Gender } from "./src/Human/Person";
 
 
+import { Booking } from "./src/BookingFlight/Booking/booking";
 
 
 
