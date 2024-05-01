@@ -4,6 +4,7 @@ import { Gate } from "../../Airport/Gate";
 import { Route } from "../../Airport/route";
 import { Pilot } from "../../Human/Employee/Pilot";
 import { Passenger } from "../../Human/Passenger/Passenger";
+import { Baggages } from "../Booking/bagages";
 import { Booking } from "../Booking/booking";
 
 
@@ -16,8 +17,8 @@ export class Flight{
         private aeroplan:Aeroplanes,
         private pilot:Pilot[],
         private airline:Airlines,
-        private passengers:Passenger[]
-        ){
+        private passengers:Passenger[]=[]
+    ){
             this.flightNumber = flightNumber;
             this.booking = booking;
             this.route = route;

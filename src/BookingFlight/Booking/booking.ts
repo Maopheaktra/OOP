@@ -57,6 +57,6 @@ export class Booking{
         this.typeTickets = newTypeTickets;
     }
 
-
+    
 }
 
