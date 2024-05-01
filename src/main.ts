@@ -6,11 +6,8 @@ import { Seat } from "./Airline/Aeroplane/seat";
 import { Passenger } from "./Human/Passenger/Passenger";
 import { Employee }  from "./Human/Employee/employee";
 import { Gender } from "./Human/Person";
-
-
-
-
-
+import { Flight } from "./BookingFlight/Flight/flight";
+import { Booking } from "./BookingFlight/Booking/booking";
 
 // add seat
 let seat1 = new Seat("1ph")
