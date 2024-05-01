@@ -1,5 +1,6 @@
 
 import { Departure } from "../../Departure/Departure";
+import { Airline } from "../airline";
 import { Gate } from "./Gate";
 import { Route } from "./route";
 export class Airport{
@@ -25,5 +26,7 @@ export class Airport{
     // addAeroplan(aeroplane: Aeroplane) {
     //     this.aeroplan.push(aeroplane);
     // }
-      
+    addAirline(airline:Airline){
+
+    }
 }
