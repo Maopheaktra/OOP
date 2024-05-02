@@ -39,6 +39,13 @@ export class Airlines{
 
  // Other methods for managing the airline's operations can be added here
  // For example, methods to manage employees, check available flights, etc.
+ findEmployeeSalary(){
+    let EmployeeSalary =  0
+    for(let employee of this.employee){
+        EmployeeSalary += employee.getSalary()
+    }
+    return EmployeeSalary
+ }
 
 }
 
