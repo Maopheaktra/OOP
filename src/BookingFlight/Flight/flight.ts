@@ -52,50 +52,18 @@ export class Flight{
         getPassenger(){
             return this.passengers;
         }
-<<<<<<< HEAD
         getFlightDate(){
             return this.date;
         }        
         getTime(){
             return this.time;
-=======
-        //get gate
-        getGate(){
-            return this.gate
-        }
-
-        setMeal(meal: Meal){
-            this.meal = meal
-        }
-        
-        getMeal(){
-            return this.meal
-        }
-        //add passenger to the flight
-        addPassenger(passenger:Passenger){
-            this.passengers.push(passenger);
->>>>>>> 9e2b9c6887ea529d78edb27577596f90584f6c6b
         }
         getPilotFromFlight(){
             return this.pilot;
         }
-<<<<<<< HEAD
         getGate(){
             return this.gate;
         }
       
 
-=======
-        // getflightduration 
-//         getFlightDuration(){
-//             let totalMinutes=0;
-//             for(let i in this.route){
-//                 totalMinutes +=this.route[i];
-//             }
-//             let hours = Math.floor(totalMinutes/60);
-//             let minutes = totalMinutes %  60;
-//             return hours + " h " + minutes + " min";
-//         }
-       
->>>>>>> 9e2b9c6887ea529d78edb27577596f90584f6c6b
 }

@@ -17,16 +17,9 @@ export class Booking{
     private departurePlace: Departure;
     private arrivalPlace: Departure;
     private typeTickets: TypeTickets; 
-<<<<<<< HEAD
     private bagages?: Baggages[] | null;
     private meals: Meal[] = [];
     private price: number;
-=======
-    private baggages: Baggages;
-    private meals: Meal;
-    private flights: Flight[]=[]
-    bag: Baggages;
->>>>>>> 9e2b9c6887ea529d78edb27577596f90584f6c6b
 
     constructor(bookingReference: string, passengers: Passenger, departurePlace: Departure,arrivalPlace:Departure, typeTickets: TypeTickets, bagages: Baggages,price: number){
         this.bookingReference = bookingReference,
