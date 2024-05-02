@@ -17,8 +17,9 @@ export class Passenger extends Person {
     findGate(){
         let gateOfFlight = []
         for (let trip of this.bookingTrip){
-            // gateOfFlight.push(trip.)
-        }
+            gateOfFlight.push(trip.getGateFromFlight())
+        } 
+        return gateOfFlight
     }
     setMeal(meal: Meal){
         this.meal = meal

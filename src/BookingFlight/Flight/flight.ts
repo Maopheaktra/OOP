@@ -5,9 +5,11 @@ import { Route } from "../../Airport/route";
 import { Pilot } from "../../Human/Employee/Pilot";
 import { Passenger } from "../../Human/Passenger/Passenger";
 import { Booking } from "../Booking/booking";
+import { Meal } from "./meal";
 
 
 export class Flight{
+    meal: Meal;
     constructor(
         private flightNumber: number,
         private booking: Booking,
@@ -34,6 +36,18 @@ export class Flight{
         getPassenger(){
             return this.passengers;
         }
+        //get gate
+        getGate(){
+            return this.gate
+        }
+
+        setMeal(meal: Meal){
+            this.meal = meal
+        }
+        
+        getMeal(){
+            return this.meal
+        }
         //add passenger to the flight
         addPassenger(passenger:Passenger){
             this.passengers.push(passenger);
@@ -46,13 +60,14 @@ export class Flight{
             };
         }
         // getflightduration 
-        getFlightDuration(){
-            let totalMinutes=0;
-            for(let i in this.route){
-                totalMinutes +=this.route[i];
-            }
-            let hours = Math.floor(totalMinutes/60);
-            let minutes = totalMinutes %  60;
-            return hours + " h " + minutes + " min";
-        }
+//         getFlightDuration(){
+//             let totalMinutes=0;
+//             for(let i in this.route){
+//                 totalMinutes +=this.route[i];
+//             }
+//             let hours = Math.floor(totalMinutes/60);
+//             let minutes = totalMinutes %  60;
+//             return hours + " h " + minutes + " min";
+//         }
+       
 }
