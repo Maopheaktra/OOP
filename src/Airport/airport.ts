@@ -35,7 +35,7 @@ export class Airport{
     getGate(){
         return this.gate;
     }
-    getRout(){
+    getRoute(){
         return this.route;
     }
     
