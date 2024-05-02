@@ -1,4 +1,4 @@
-import { Meal } from "../Flight/meal";
+import { Meal } from "./meal";
 import { Baggages } from "./bagages";
 import { Departure } from "../../Departure/Departure";
 import { Passenger } from "../../Human/Passenger/Passenger";
@@ -41,19 +41,15 @@ export class Booking{
         return this.passengers;
     }
 
-    getReturnTicket(){
-        return this.typeTickets;
-    }
-
     getMeal(meals: Meal){
         return this.meals
     }
 
-    setBaggage(bag:Baggages){
+    setBaggage(bag:Baggages): void{
         this.bag=bag
     }
 
-    setTypeTickets(newTypeTickets:TypeTickets){
+    setTypeTickets(newTypeTickets:TypeTickets): void{
         this.typeTickets = newTypeTickets;
     }
     getReturnTickets(){

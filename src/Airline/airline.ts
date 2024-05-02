@@ -37,7 +37,7 @@ export class Airlines{
    findReturnTicket(){
     let numberOfPassenger = 0;
         for(let bookingTicket of this.booking){
-            if(bookingTicket.getReturnTicket() == 0){
+            if(bookingTicket.getReturnTickets() == 0){
                 numberOfPassenger +=1
             }
         }
