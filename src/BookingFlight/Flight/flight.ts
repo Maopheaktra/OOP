@@ -7,6 +7,7 @@ import { Passenger } from "../../Human/Passenger/Passenger";
 import { Baggages } from "../Booking/bagages";
 import { CoPilot } from "../../Human/Employee/Co-Pilot";
 import { date } from "../../Date-time/date";
+import { time } from "../../Date-time/time";
 import { Meal } from "../Booking/meal";
 export class Flight{
     constructor(
@@ -17,9 +18,11 @@ export class Flight{
         private pilot:Pilot[],
         private airline:Airlines,
         private passengers:Passenger[]=[],
-        private date : Date[]= [],
+        private date : Date,
         private CoPilot : CoPilot[] = [],
-        private Meal : Meal
+        private Meal : Meal,
+        private time : time,
+
     ){
             this.flightNumber = flightNumber;
             this.route = route;
@@ -29,13 +32,11 @@ export class Flight{
             this.airline = airline;
             this.passengers = passengers;
             this.CoPilot = CoPilot;
+            this.time = time,
+            this.date = date
+
         }
-        setMeal(meal: Meal){
-            this.Meal = meal
-        }
-        getMealType(){
-            return this.Meal;
-        }
+        
         getFlightNumber(){
             return this.flightNumber;
         }
@@ -46,8 +47,15 @@ export class Flight{
         getFlightDate(){
             return this.date;
         }        
+        getTime(){
+            return this.time;
+        }
         getPilotFromFlight(){
             return this.pilot;
         }
+        getGate(){
+            return this.gate;
+        }
+      
 
 }

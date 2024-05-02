@@ -11,50 +11,56 @@ export enum TypeTickets{
 }
 
 export class Booking{
-    private bookingID: string;
     private bookingReference: string;
-    private bookingFlight: string;
+    private flight: Flight[] = []
     private passengers: Passenger;
     private departurePlace: Departure;
+    private arrivalPlace: Departure;
     private typeTickets: TypeTickets; 
-    private baggages: Baggages;
-    private meals: Meal;
-    bag: Baggages;
+    private bagages?: Baggages[] | null;
+    private meals: Meal[] = [];
+    private price: number;
 
-    constructor(bookingID:string, bookingReference:string, bookingFlight:string, passengers: Passenger, departurePlace: Departure, typeTickets:TypeTickets, baggages: Baggages, meal: Meal){
-        this.bookingID = bookingID
-        this.bookingReference = bookingReference
-        this.bookingFlight = bookingFlight
-        this.passengers = passengers
-        this.departurePlace = departurePlace
-        this.typeTickets = typeTickets
-        this.baggages = baggages
-        this.meals = meal
-        
-    }
-    
-    getBookingID(){
-        return this.bookingID;
-    }
+    constructor(bookingReference: string, passengers: Passenger, departurePlace: Departure,arrivalPlace:Departure, typeTickets: TypeTickets, bagages: Baggages,price: number){
+        this.bookingReference = bookingReference,
+        this.passengers = passengers,
+        this.departurePlace = departurePlace,
+        this.arrivalPlace = arrivalPlace
+        this.typeTickets = typeTickets,
+        this.meals,
+        bagages = bagages,
+        this.price = price
 
-    getPassenger(){
+
+    }
+    addBookingFlight(flight:Flight):void{
+        this.flight.push(flight)
+    }
+    setBaggages(bagagges: Baggages[]):void{
+        this.bagages = bagagges
+    }
+    getPassenger(): Passenger{
         return this.passengers;
     }
 
-    getMeal(meals: Meal){
+    setMeal(meal: Meal[]): void{
+        this.meals = meal;
+    }
+    getMeal(){
         return this.meals
     }
-
-    setBaggage(bag:Baggages): void{
-        this.bag=bag
-    }
-
     setTypeTickets(newTypeTickets:TypeTickets): void{
         this.typeTickets = newTypeTickets;
     }
     getReturnTickets(){
         return this.typeTickets;
     }
-    
+    getGateFromFlight(){
+        let gateFlights = []
+        for(let flight of this.flight){
+            gateFlights.push(flight.getGate())
+        }
+        return gateFlights
+    }
 }
 

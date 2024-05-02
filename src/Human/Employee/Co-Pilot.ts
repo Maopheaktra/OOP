@@ -1,5 +1,5 @@
 import { Gender } from "../Person";
-import { Employee } from "./employee";
+import { crewMember,Employee } from "./employee";
 import { Flight } from "../../BookingFlight/Flight/flight";
 import { date } from "../../Date-time/date";
  
@@ -13,10 +13,11 @@ export class CoPilot extends Employee {
         phone: string, 
         gender:Gender,
         private date: Date[] = [],
-        private flight : Flight[] = []
+        private flight : Flight[] = [],
+        Category: crewMember
 
     ){
-        super (salary,firstName,lastName,email,phone,gender);
+        super(salary,firstName,lastName,email,phone,gender,Category);
         this.CardID = CardID;
         this.date = date;
     }

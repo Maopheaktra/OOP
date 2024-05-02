@@ -4,18 +4,22 @@ export enum crewMember{
     FLIGHT_ATTENDANCE,
     CABINCREW,
     CHEF,
+    PILOT,
+    CO_PILOT,
 
 }
 // export abstract class Employee extends person {
 export abstract class Employee extends Person{
-    private salary: number = 0; //by default
+    protected salary: number = 0; //by default
     constructor(
         salary: number, 
         firstName: string, 
         lastName: string, 
         email: string, 
         phone: string, 
-        gender:Gender
+        gender:Gender,
+        protected Category : crewMember,
+
     ){
         super(firstName, lastName, email, phone, gender);
             this.salary = salary;
