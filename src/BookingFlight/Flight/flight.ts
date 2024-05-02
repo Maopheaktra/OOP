@@ -4,18 +4,14 @@ import { Gate } from "../../Airport/Gate";
 import { Route } from "../../Airport/route";
 import { Pilot } from "../../Human/Employee/Pilot";
 import { Passenger } from "../../Human/Passenger/Passenger";
-<<<<<<< HEAD
 import { Baggages } from "../Booking/bagages";
 import { CoPilot } from "../../Human/Employee/Co-Pilot";
 import { date } from "../../Date-time/date";
 import { time } from "../../Date-time/time";
 import { Meal } from "../Booking/meal";
-=======
 import { Booking } from "../Booking/booking";
-import { Meal } from "./meal";
 
 
->>>>>>> 9e2b9c6887ea529d78edb27577596f90584f6c6b
 export class Flight{
     meal: Meal;
     constructor(
