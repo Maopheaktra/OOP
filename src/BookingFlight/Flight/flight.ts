@@ -30,7 +30,29 @@ export class Flight{
         getFlightNumber(){
             return this.flightNumber;
         }
-        addFlight(){
-            return this.booking;
+        //get passenger 
+        getPassenger(){
+            return this.passengers;
+        }
+        //add passenger to the flight
+        addPassenger(passenger:Passenger){
+            this.passengers.push(passenger);
+        }
+        // Remove passengers to the flight 
+        removePassenger(passenger:Passenger){
+            let index = this.getPassenger().indexOf(passenger);
+            if (index > -1) { 
+                this.passengers.splice(index, 1);  
+            };
+        }
+        // getflightduration 
+        getFlightDuration(){
+            let totalMinutes=0;
+            for(let i in this.route){
+                // totalMinutes +=this.route[i];
+            }
+            let hours = Math.floor(totalMinutes/60);
+            let minutes = totalMinutes %  60;
+            return hours + " h " + minutes + " min";
         }
 }

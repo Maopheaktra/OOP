@@ -21,10 +21,10 @@ export abstract class Employee extends Person{
         phone: string, 
         gender:Gender
     ){
-        super(firstName, lastName, email, phone,gender);
-        this.EmployeeID = EmployeeID;
-        this.salary = salary;
-        this.workHour = workHour;
+        super(firstName, lastName, email, phone, gender);
+            this.EmployeeID = EmployeeID;
+            this.salary = salary;
+            this.workHour = workHour;
     }
     getSalary() {
         return this.salary;
