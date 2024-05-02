@@ -2,14 +2,15 @@
 import { Airlines } from "./Airline/airline";
 import { Aeroplanes } from "./Airline/Aeroplane/aeroplane";
 import { Seat } from "./Airline/Aeroplane/seat";
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8232b904492b103eb9e4b765e2bb023a0a9ead1b
 import { Flight } from "./BookingFlight/Flight/flight";
 import { Employee } from "./Human/Employee/employee";
 import { Passenger } from "./Human/Passenger/Passenger";
 import { Gender } from "./Human/Person";
-
-
 import { Booking } from "./BookingFlight/Booking/booking";
 
 // add seat
