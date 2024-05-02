@@ -19,6 +19,7 @@ export class Booking{
     private typeTickets: TypeTickets; 
     private baggages: Baggages;
     private meals: Meal;
+    private flights: Flight[]=[]
     bag: Baggages;
 
     constructor(bookingID:string, bookingReference:string, bookingFlight:string, passengers: Passenger, departurePlace: Departure, typeTickets:TypeTickets, baggages: Baggages, meal: Meal){
@@ -43,10 +44,13 @@ export class Booking{
 
     getReturnTicket(){
         return this.typeTickets;
-    }
+    }    
 
-    getMeal(meals: Meal){
-        return this.meals
+    getGateFromFlight(){
+        let gateFlight =[]
+        for(let flight of this.flights){
+            gateFlight.push(flight.getGate())
+        }
     }
 
     setBaggage(bag:Baggages){
