@@ -15,4 +15,7 @@ class Chef extends Employee{
     ){
         super (EmployeeID,salary,workHour,firstName,lastName,email,phone,gender);
     }
+    findMealType(){
+    
+    }
 }

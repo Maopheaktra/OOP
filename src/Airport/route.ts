@@ -4,3 +4,4 @@ export class Route{
         
     }
 }
+let route1 = new Route("123f")

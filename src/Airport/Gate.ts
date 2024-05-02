@@ -3,3 +3,4 @@ export class Gate{
         this.gateId = gateId;
     }
 }
+let gate1 = new Gate("1235T")
