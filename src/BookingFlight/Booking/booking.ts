@@ -17,9 +17,16 @@ export class Booking{
     private departurePlace: Departure;
     private arrivalPlace: Departure;
     private typeTickets: TypeTickets; 
+<<<<<<< HEAD
     private bagages?: Baggages[] | null;
     private meals: Meal[] = [];
     private price: number;
+=======
+    private baggages: Baggages;
+    private meals: Meal;
+    private flights: Flight[]=[]
+    bag: Baggages;
+>>>>>>> 9e2b9c6887ea529d78edb27577596f90584f6c6b
 
     constructor(bookingReference: string, passengers: Passenger, departurePlace: Departure,arrivalPlace:Departure, typeTickets: TypeTickets, bagages: Baggages,price: number){
         this.bookingReference = bookingReference,
@@ -43,11 +50,15 @@ export class Booking{
         return this.passengers;
     }
 
-    setMeal(meal: Meal[]): void{
-        this.meals = meal;
-    }
-    getMeal(){
-        return this.meals
+    getReturnTicket(){
+        return this.typeTickets;
+    }    
+
+    getGateFromFlight(){
+        let gateFlight =[]
+        for(let flight of this.flight){
+            gateFlight.push(flight.getGate())
+        }
     }
     setTypeTickets(newTypeTickets:TypeTickets): void{
         this.typeTickets = newTypeTickets;
@@ -55,12 +66,6 @@ export class Booking{
     getReturnTickets(){
         return this.typeTickets;
     }
-    getGateFromFlight(){
-        let gateFlights = []
-        for(let flight of this.flight){
-            gateFlights.push(flight.getGate())
-        }
-        return gateFlights
-    }
+
 }
 
