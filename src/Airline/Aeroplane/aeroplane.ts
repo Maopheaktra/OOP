@@ -9,8 +9,3 @@ export class Aeroplanes{
     }
 }
 
-
-let seat1 = new Seat(13);
-let Aeroplane1 = new Aeroplanes("PHN");
-Aeroplane1.addSeat(seat1);
-console.log(Aeroplane1);
