@@ -1,7 +1,7 @@
 import { Aeroplanes } from "../../Airline/Aeroplane/aeroplane";
 import { Airlines } from "../../Airline/airline";
-import { Gate } from "../../Airline/Airport/Gate";
-import { Route } from "../../Airline/Airport/route";
+import { Gate } from "../../Airport/Gate";
+import { Route } from "../../Airport/route";
 import { Pilot } from "../../Human/Employee/Pilot";
 import { Passenger } from "../../Human/Passenger/Passenger";
 import { Baggages } from "../Booking/bagages";
@@ -47,13 +47,13 @@ export class Flight{
             };
         }
         // getflightduration 
-        getFlightDuration(){
-            let totalMinutes=0;
-            for(let i in this.route){
-                totalMinutes +=this.route[i];
-            }
-            let hours = Math.floor(totalMinutes/60);
-            let minutes = totalMinutes %  60;
-            return hours + " h " + minutes + " min";
-        }
+        // getFlightDuration(){
+        //     let totalMinutes=0;
+        //     for(let i in this.route){
+        //         totalMinutes +=this.route[i];
+        //     }
+        //     let hours = Math.floor(totalMinutes/60);
+        //     let minutes = totalMinutes %  60;
+        //     return hours + " h " + minutes + " min";
+        // }
 }

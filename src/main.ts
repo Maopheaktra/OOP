@@ -18,7 +18,7 @@ let seat1 = new Seat("1ph")
 let Aeroplane1 = new Aeroplanes("PHN");
 Aeroplane1.addSeat(seat1);
 let PM_Airline = new Airlines("PM_Airline");
-PM_Airline.addAeroplane(Aeroplane1);
+// PM_Airline.addAeroplan(Aeroplane1);
 
 console.log(PM_Airline);
 
