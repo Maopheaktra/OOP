@@ -1,5 +1,5 @@
 
-import { Departure } from "../../Departure/Departure";
+import { Departure } from "../Departure/Departure";
 import { Gate } from "./Gate";
 import { Route } from "./route";
 export class Airport{
