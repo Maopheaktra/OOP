@@ -34,7 +34,15 @@ export class Airlines{
    getFlight(flight: Flight){
     this.flight.push(flight)
    }
-   
+   findReturnTicket(){
+    let numberOfPassenger = 0;
+        for(let bookingTicket of this.booking){
+            if(bookingTicket.getReturnTicket() == 0){
+                numberOfPassenger +=1
+            }
+        }
+        return numberOfPassenger
+   }
 }
 
 

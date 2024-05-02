@@ -56,7 +56,9 @@ export class Booking{
     setTypeTickets(newTypeTickets:TypeTickets){
         this.typeTickets = newTypeTickets;
     }
-
+    getReturnTickets(){
+        return this.typeTickets;
+    }
     
 }
 
