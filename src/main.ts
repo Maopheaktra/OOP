@@ -2,6 +2,8 @@
 import { Airlines } from "./Airline/airline";
 import { Aeroplanes } from "./Airline/Aeroplane/aeroplane";
 import { Seat } from "./Airline/Aeroplane/seat";
+
+
 import { Flight } from "./BookingFlight/Flight/flight";
 import { Employee } from "./Human/Employee/employee";
 import { Passenger } from "./Human/Passenger/Passenger";
@@ -14,7 +16,7 @@ let seat1 = new Seat("1ph")
 let Aeroplane1 = new Aeroplanes("PHN");
 Aeroplane1.addSeat(seat1);
 let PM_Airline = new Airlines("PM_Airline");
-PM_Airline.addAeroplane(Aeroplane1);
+// PM_Airline.addAeroplan(Aeroplane1);
 
 console.log(PM_Airline);
 
