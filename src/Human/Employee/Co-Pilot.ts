@@ -1,7 +1,7 @@
 import { Gender } from "../Person";
 import { Pilot } from "./Pilot";
 
-class CoPilot extends Pilot{
+export class CoPilot extends Pilot{
     constructor(
         EmployeeID:string, 
         salary: number, 
