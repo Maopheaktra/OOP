@@ -9,6 +9,4 @@ export class Aeroplanes{
         return this.seat.push(seat)
     }
 }
-let Airplane1 = new Aeroplanes("1er12");
-let seat1 = new Seat("12E");
-Airplane1.addSeat(seat1)
+
