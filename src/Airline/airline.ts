@@ -11,7 +11,6 @@ export class Airlines{
     constructor(name: string){
         this.name = name
    }
-<<<<<<< HEAD
    addAeroplane(airplane: Aeroplanes): void {
      this.airplane.push(airplane);
  }
@@ -25,7 +24,7 @@ export class Airlines{
  bookFlight(flight: Flight, booking: Booking): void {
      // Assuming flight and booking are valid and not already booked
      this.flight.push(flight);
-     this.bookingFlight.push(booking);
+     this.booking.push(booking);
  }
 
  // Method to retrieve all flights of the airline
@@ -35,7 +34,7 @@ export class Airlines{
 
  // Method to retrieve all bookings made with the airline
  getBookings(): Booking[] {
-     return this.bookingFlight;
+     return this.booking;
  }
 
  // Other methods for managing the airline's operations can be added here
@@ -47,15 +46,10 @@ export class Airlines{
     }
     return EmployeeSalary
  }
-=======
->>>>>>> b9e3364c29ccd257175ff478e8d6fb4437e5dc75
 
    
    addAeroplan(aeroplane:Aeroplanes){
     return this.airplane.push(aeroplane)
-   }
-   addEmployee(employee: Employee){
-    return this.employee.push(employee)
    }
    addBooking(booking: Booking){
     return this.booking.push(booking)
