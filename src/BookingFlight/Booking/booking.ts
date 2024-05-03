@@ -5,24 +5,24 @@ import { Passenger } from "../../Human/Passenger/Passenger";
 import { Flight } from "../Flight/flight";
 
 
-export enum TypeTickets{
+export enum TypeTickets {
     return_Ticket,
     single_Ticket,
 }
 
-export class Booking{
+export class Booking {
     private bookingID: string;
     private bookingReference: string;
     private bookingFlight: string;
     private passengers: Passenger;
     private departurePlace: Departure;
-    private typeTickets: TypeTickets; 
+    private typeTickets: TypeTickets;
     private baggages: Baggages;
     private meals: Meal;
-    private flights: Flight[]=[]
+    private flights: Flight[] = []
     bag: Baggages;
 
-    constructor(bookingID:string, bookingReference:string, bookingFlight:string, passengers: Passenger, departurePlace: Departure, typeTickets:TypeTickets, baggages: Baggages, meal: Meal){
+    constructor(bookingID: string, bookingReference: string, bookingFlight: string, passengers: Passenger, departurePlace: Departure, typeTickets: TypeTickets, baggages: Baggages, meal: Meal) {
         this.bookingID = bookingID
         this.bookingReference = bookingReference
         this.bookingFlight = bookingFlight
@@ -31,36 +31,42 @@ export class Booking{
         this.typeTickets = typeTickets
         this.baggages = baggages
         this.meals = meal
-        
+
     }
-    
-    getBookingID(){
+
+    getBookingID() {
         return this.bookingID;
     }
 
-    getPassenger(){
+    getPassenger() {
         return this.passengers;
     }
 
-    getReturnTicket(){
+    getReturnTicket() {
         return this.typeTickets;
-    }    
+    }
 
-    getGateFromFlight(){
-        let gateFlight =[]
-        for(let flight of this.flights){
+    getGateFromFlight() {
+        let gateFlight = []
+        for (let flight of this.flights) {
             gateFlight.push(flight.getGate())
         }
     }
 
-    setBaggage(bag:Baggages){
-        this.bag=bag
+    getMeal() {
+        return this.meals
     }
 
-    setTypeTickets(newTypeTickets:TypeTickets){
+    setMeal(meal: Meal) {
+        this.meals = meal
+    }
+
+    setBaggage(bag: Baggages) {
+        this.bag = bag
+    }
+
+    setTypeTickets(newTypeTickets: TypeTickets) {
         this.typeTickets = newTypeTickets;
     }
-
-
 }
 
