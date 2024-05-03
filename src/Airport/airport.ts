@@ -3,7 +3,7 @@ import { Departure } from "../Departure/Departure";
 import { Gate } from "./Gate";
 import { Route } from "./route";
 import { Airlines } from "../Airline/airline";
-import { Passenger } from "../Human/Passenger/Passenger";
+import { Flight } from "../BookingFlight/Flight/flight";
 export class Airport{
     constructor(
         private name: string,
@@ -11,8 +11,7 @@ export class Airport{
         private route: Route[] = [],
         private departure:Departure,
         private  arrivalPlace : Departure,
-        private airline : Airlines[] = [],
-        private passenger : Passenger[] = []
+        private flight: Flight[] = []
     ){
         this.name = name;
         
@@ -20,18 +19,17 @@ export class Airport{
     getName(){
         return this.name;
     }
+    
     addGate(gate: Gate){
         this.gate.push(gate);
     }
+
     addRoute(route: Route){
         this.route.push(route);
     }
-    addAirline(airline:Airlines){
-        this.airline.push(airline);
-    }
-    getAirline(){
-        return this.airline;
-    }
+
+
+
     getGate(){
         return this.gate;
     }
@@ -39,4 +37,11 @@ export class Airport{
         return this.route;
     }
     
+    getGateFromFlight(){
+        let gateFlight =[]
+        for(let flight of this.flight){
+            gateFlight.push(flight.getGate())
+        }
+    }
+
 }

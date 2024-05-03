@@ -46,21 +46,19 @@ export class Booking{
         return this.typeTickets;
     }    
 
-    getGateFromFlight(){
-        let gateFlight =[]
-        for(let flight of this.flight){
-            gateFlight.push(flight.getGate())
-        }
-    }
+
     setTypeTickets(newTypeTickets:TypeTickets): void{
         this.typeTickets = newTypeTickets;
     }
+
     getReturnTickets(){
         return this.typeTickets;
     }
+
     setMeal(meals:Meal): void{
         this.meals = meals
     }
+
     getMeal(){
         return this.meals
     }
