@@ -1,18 +1,33 @@
 import { Gender } from "../Person";
-import { Pilot } from "./Pilot";
-
-export class CoPilot extends Pilot{
+import { crewMember,Employee } from "./employee";
+import { Flight } from "../../BookingFlight/Flight/flight";
+import { date } from "../../Date-time/date";
+ 
+export class CoPilot extends Employee {
     constructor(
-        EmployeeID:string, 
+        private CardID : string,
         salary: number, 
-        workHour: number,
         firstName: string, 
         lastName: string, 
         email: string, 
         phone: string, 
-        gender:Gender
+        gender:Gender,
+        private date: Date[] = [],
+        private flight : Flight[] = [],
+        Category: crewMember
 
     ){
-        super (EmployeeID,salary,workHour,firstName,lastName,email,phone,gender);
+        super(salary,firstName,lastName,email,phone,gender,Category);
+        this.CardID = CardID;
+        this.date = date;
+    }
+    addflight(flight: Flight){
+        return this.flight.push(flight);
+    }
+    addSchedule(schedule: Date){
+        return this.date.push(schedule)
+    }
+    getPilotId(){
+        return this.CardID;
     }
 }

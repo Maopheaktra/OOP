@@ -4,31 +4,43 @@ import { Gate } from "../../Airport/Gate";
 import { Route } from "../../Airport/route";
 import { Pilot } from "../../Human/Employee/Pilot";
 import { Passenger } from "../../Human/Passenger/Passenger";
+import { Baggages } from "../Booking/bagages";
+import { CoPilot } from "../../Human/Employee/Co-Pilot";
+import { date } from "../../Date-time/date";
+import { time } from "../../Date-time/time";
+import { Meal } from "../Booking/meal";
 import { Booking } from "../Booking/booking";
-import { Meal } from "./meal";
 
 
 export class Flight{
     meal: Meal;
     constructor(
         private flightNumber: number,
-        private booking: Booking,
         private route:Route[],
         private gate:Gate[],
         private aeroplan:Aeroplanes,
         private pilot:Pilot[],
         private airline:Airlines,
-        private passengers:Passenger[]
-        ){
+        private passengers:Passenger[]=[],
+        private date : Date,
+        private CoPilot : CoPilot[] = [],
+        private Meal : Meal,
+        private time : time,
+
+    ){
             this.flightNumber = flightNumber;
-            this.booking = booking;
             this.route = route;
             this.gate = gate;
             this.aeroplan = aeroplan;
             this.pilot = pilot;
             this.airline = airline;
             this.passengers = passengers;
+            this.CoPilot = CoPilot;
+            this.time = time,
+            this.date = date
+
         }
+        
         getFlightNumber(){
             return this.flightNumber;
         }
@@ -36,38 +48,18 @@ export class Flight{
         getPassenger(){
             return this.passengers;
         }
-        //get gate
+        getFlightDate(){
+            return this.date;
+        }        
+        getTime(){
+            return this.time;
+        }
+        getPilotFromFlight(){
+            return this.pilot;
+        }
         getGate(){
-            return this.gate
+            return this.gate;
         }
+      
 
-        setMeal(meal: Meal){
-            this.meal = meal
-        }
-        
-        getMeal(){
-            return this.meal
-        }
-        //add passenger to the flight
-        addPassenger(passenger:Passenger){
-            this.passengers.push(passenger);
-        }
-        // Remove passengers to the flight 
-        removePassenger(passenger:Passenger){
-            let index = this.getPassenger().indexOf(passenger);
-            if (index > -1) { 
-                this.passengers.splice(index, 1);  
-            };
-        }
-        // getflightduration 
-//         getFlightDuration(){
-//             let totalMinutes=0;
-//             for(let i in this.route){
-//                 totalMinutes +=this.route[i];
-//             }
-//             let hours = Math.floor(totalMinutes/60);
-//             let minutes = totalMinutes %  60;
-//             return hours + " h " + minutes + " min";
-//         }
-       
 }

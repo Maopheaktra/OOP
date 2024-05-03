@@ -1,16 +1,17 @@
 import { Aeroplanes } from "./Aeroplane/aeroplane";
 import { Employee } from "../Human/Employee/employee";
-import { Booking } from "../BookingFlight/Booking/booking";
 import { Flight } from "../BookingFlight/Flight/flight";
+import { Booking } from "../BookingFlight/Booking/booking";
 export class Airlines{
     private name: string
     private airplane: Aeroplanes[] = []
     private employee: Employee[] = []
-    private bookingFlight: Booking[] = []
     private flight : Flight[] = []
+    private booking: Booking[] = []
     constructor(name: string){
         this.name = name
    }
+<<<<<<< HEAD
    addAeroplane(airplane: Aeroplanes): void {
      this.airplane.push(airplane);
  }
@@ -46,7 +47,40 @@ export class Airlines{
     }
     return EmployeeSalary
  }
+=======
+>>>>>>> Employee
 
+   
+   addAeroplan(aeroplane:Aeroplanes){
+    return this.airplane.push(aeroplane)
+   }
+   addEmployee(employee: Employee){
+    return this.employee.push(employee)
+   }
+   addBooking(booking: Booking){
+    return this.booking.push(booking)
+   }
+   addFlight(flight: Flight){
+       this.flight.push(flight)
+    }
+    getBooking(booking:Booking){
+     this.booking.push(booking)
+    }
+   getEmployee(employee: Employee){
+    this.employee.push(employee)
+   }
+   getFlight(flight: Flight){
+    this.flight.push(flight)
+   }
+   findReturnTicket(){
+    let numberOfPassenger = 0;
+        for(let bookingTicket of this.booking){
+            if(bookingTicket.getReturnTickets() == 0){
+                numberOfPassenger +=1
+            }
+        }
+        return numberOfPassenger
+   }
 }
 
 
