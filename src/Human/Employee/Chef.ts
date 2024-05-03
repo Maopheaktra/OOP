@@ -3,19 +3,13 @@ import { crewMember, Employee } from "./employee";
 
 class Chef extends Employee{
     constructor(
-        EmployeeID:string, 
-        salary: number, 
-        workHour: number,
-        firstName: string, 
-        lastName: string, 
+        Name:string,
         email: string, 
-        phone: string, 
         gender:Gender,
+        Category:crewMember
 
     ){
-        super (EmployeeID,salary,workHour,firstName,lastName,email,phone,gender);
+        super (Name,email,gender, Category);
     }
-    findMealType(){
     
-    }
 }

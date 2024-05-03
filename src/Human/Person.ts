@@ -5,20 +5,16 @@ export enum Gender{
 
 export abstract class Person{
     
-    protected firstName :string
-    protected lastName :string
+    protected Name :string
     protected email : string
-    protected phone: string;
     protected gender: Gender
-    constructor(firstName: string, lastName: string, email: string, phone: string, gender:Gender){
-      this.firstName = firstName
-      this.lastName = lastName
+    constructor(Name:string,email: string, gender:Gender){
+      this.Name = Name
       this.email = email
-      this.phone = phone
       this.gender = gender
     }
     getName(): string{
-        return this.firstName + " " + this.lastName;
+        return this.Name;
     }
     
 }

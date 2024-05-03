@@ -1,8 +1,6 @@
 import { Gender, Person } from "../Person";
 
 export enum crewMember{
-    FLIGHT_ATTENDANCE,
-    CABINCREW,
     CHEF,
     PILOT,
     CO_PILOT,
@@ -12,23 +10,22 @@ export enum crewMember{
 export abstract class Employee extends Person{
     protected salary: number = 0; //by default
     constructor(
-        salary: number, 
-        firstName: string, 
-        lastName: string, 
+        Name: string, 
         email: string, 
-        phone: string, 
         gender:Gender,
-        protected Category : crewMember,
+        protected Category : crewMember
 
     ){
-        super(firstName, lastName, email, phone, gender);
-            this.salary = salary;
+        super(Name,email,gender);
+            this.Category = Category
+    }
+    setSalary(salary:number){
+        this.salary = salary;
     }
     getSalary() {
         return this.salary;
     }
-    addSalary(){
-        this.salary = this.salary
+    getCateory(){
+        return this.Category;
     }
-    
 }

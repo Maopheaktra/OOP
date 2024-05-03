@@ -26,10 +26,6 @@ export class Airport{
     addRoute(route: Route){
         this.route.push(route);
     }
-    // addAeroplan(aeroplane: Aeroplane) {
-    //     this.aeroplan.push(aeroplane);
-    // }
-      
     addAirline(airline:Airlines){
         this.airline.push(airline);
     }
@@ -43,5 +39,4 @@ export class Airport{
         return this.route;
     }
     
-}
 }

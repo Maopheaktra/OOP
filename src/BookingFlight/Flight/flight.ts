@@ -60,6 +60,6 @@ export class Flight{
         getGate(){
             return this.gate;
         }
-      
+        
 
 }

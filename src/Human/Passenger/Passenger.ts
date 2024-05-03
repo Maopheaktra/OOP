@@ -1,13 +1,11 @@
 import { Gender,Person } from "../Person";
 import { Booking } from "../../BookingFlight/Booking/booking";
 import { Gate } from "../../Airport/Gate";
-import {Meal} from "../../BookingFlight/Flight/meal";
 export class Passenger extends Person {
     private passengerID: string;
     private bookingTrip: Booking []=[];
-    meal: Meal;
-    constructor(passengerID: string, firstName: string, lastName: string, email: string, phone: string, gender: Gender) {
-        super(firstName, lastName, email, phone,gender)
+    constructor(passengerID: string,Name:string,email: string,gender: Gender) {
+        super(Name, email,gender)
         this.passengerID = passengerID;
         gender = gender
     }
@@ -21,12 +19,7 @@ export class Passenger extends Person {
         } 
         return gateOfFlight
     }
-    setMeal(meal: Meal){
-        this.meal = meal
-    }
-    getMeal(){
-        return this.meal
-    }
+    
 
 }
 

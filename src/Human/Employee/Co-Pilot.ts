@@ -7,19 +7,18 @@ export class CoPilot extends Employee {
     constructor(
         private CardID : string,
         salary: number, 
-        firstName: string, 
-        lastName: string, 
+        Name:string,
         email: string, 
-        phone: string, 
         gender:Gender,
         private date: Date[] = [],
         private flight : Flight[] = [],
         Category: crewMember
 
     ){
-        super(salary,firstName,lastName,email,phone,gender,Category);
+        super(Name,email,gender,Category);
         this.CardID = CardID;
         this.date = date;
+        this.Category = Category
     }
     addflight(flight: Flight){
         return this.flight.push(flight);

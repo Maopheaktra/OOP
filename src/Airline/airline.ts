@@ -11,75 +11,57 @@ export class Airlines{
     constructor(name: string){
         this.name = name
    }
-<<<<<<< HEAD
-   addAeroplane(airplane: Aeroplanes): void {
-     this.airplane.push(airplane);
- }
-
- // Method to add an employee to the airline
- addEmployee(employee: Employee): void {
-     this.employee.push(employee);
- }
-
- // Method to book a flight for a passenger
- bookFlight(flight: Flight, booking: Booking): void {
-     // Assuming flight and booking are valid and not already booked
-     this.flight.push(flight);
-     this.bookingFlight.push(booking);
- }
-
- // Method to retrieve all flights of the airline
- getFlights(): Flight[] {
-     return this.flight;
- }
-
- // Method to retrieve all bookings made with the airline
- getBookings(): Booking[] {
-     return this.bookingFlight;
- }
-
- // Other methods for managing the airline's operations can be added here
- // For example, methods to manage employees, check available flights, etc.
- findEmployeeSalary(){
-    let EmployeeSalary =  0
-    for(let employee of this.employee){
-        EmployeeSalary += employee.getSalary()
+    addAeroplane(airplane: Aeroplanes): void {
+        this.airplane.push(airplane);
     }
-    return EmployeeSalary
- }
-=======
->>>>>>> Employee
 
-   
-   addAeroplan(aeroplane:Aeroplanes){
-    return this.airplane.push(aeroplane)
-   }
-   addEmployee(employee: Employee){
-    return this.employee.push(employee)
-   }
-   addBooking(booking: Booking){
-    return this.booking.push(booking)
-   }
-   addFlight(flight: Flight){
-       this.flight.push(flight)
+    addEmployee(employee: Employee): void {
+        this.employee.push(employee);
     }
+    addAeroplan(aeroplane:Aeroplanes){
+        return this.airplane.push(aeroplane)
+    }
+    
+    addBooking(booking: Booking){
+        return this.booking.push(booking)
+    }
+
+    addFlight(flight: Flight){
+        this.flight.push(flight)
+        }
+
     getBooking(booking:Booking){
-     this.booking.push(booking)
+        this.booking.push(booking)
     }
-   getEmployee(employee: Employee){
-    this.employee.push(employee)
+
+
+    findEmployeeSalary(){
+        let EmployeeSalary =  0
+        for(let employee of this.employee){
+            EmployeeSalary += employee.getSalary()
+        }
+        return EmployeeSalary
+    }
+
+
+    findPassengerReturnTicket(){
+        let numberOfPassenger = 0;
+            for(let bookingTicket of this.booking){
+                if(bookingTicket.getReturnTickets() == 0){
+                    numberOfPassenger +=1
+                }
+            }
+            return numberOfPassenger
    }
-   getFlight(flight: Flight){
-    this.flight.push(flight)
-   }
-   findReturnTicket(){
-    let numberOfPassenger = 0;
-        for(let bookingTicket of this.booking){
-            if(bookingTicket.getReturnTickets() == 0){
-                numberOfPassenger +=1
+
+   findTypeMeal(booking: Booking):void{
+        let listOfMeal = []
+        for(let book of this.booking){
+            if (book.getMeal()== booking.getMeal()) {
+                listOfMeal.push(booking.getMeal());
             }
         }
-        return numberOfPassenger
+        listOfMeal
    }
 }
 

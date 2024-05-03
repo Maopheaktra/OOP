@@ -3,27 +3,18 @@ import { crewMember,Employee } from "./employee";
 import { Flight } from "../../BookingFlight/Flight/flight";
 import { date } from "../../Date-time/date";
 
-export enum ROLE {
-    CoPilot,
-    Pilot
-}
-export abstract class Pilot extends Employee {
+export class Pilot extends Employee {
     constructor(
         private CardID : string,
-        salary: number, 
-        firstName: string, 
-        lastName: string, 
+        Name :string,
         email: string, 
-        phone: string, 
         gender:Gender,
+        Category : crewMember,
         private flight : Flight[] = [],
         private date : date[] = [],
-        Category : crewMember
     ){
-        super(salary,firstName, lastName, email,phone, gender, Category);
+        super(Name , email,gender, Category);
         this.CardID = CardID
-        this.flight = []
-        this.date = []
     }
     addflight(flight: Flight){
         return this.flight.push(flight);
