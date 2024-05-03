@@ -11,7 +11,7 @@ export class Pilot extends Employee {
         gender:Gender,
         Category : crewMember,
         private flight : Flight[] = [],
-        private date : date[] = [],
+        private date : Date[] = [],
     ){
         super(Name , email,gender, Category);
         this.CardID = CardID
@@ -19,6 +19,13 @@ export class Pilot extends Employee {
     addflight(flight: Flight){
         return this.flight.push(flight);
     }
+    addDate(date: Date){
+        return this.date.push(date);
+    }
+    getdate(){
+        return this.date;
+    }
+    
     getPilotId(){
         return this.CardID;
     }
