@@ -23,9 +23,6 @@ export class CoPilot extends Employee {
     addflight(flight: Flight){
         return this.flight.push(flight);
     }
-    addSchedule(schedule: Date){
-        return this.date.push(schedule)
-    }
     getPilotId(){
         return this.CardID;
     }

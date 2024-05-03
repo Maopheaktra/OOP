@@ -19,9 +19,6 @@ export class Pilot extends Employee {
     addflight(flight: Flight){
         return this.flight.push(flight);
     }
-    addSchedule(schedule: date){
-        return this.date.push(schedule)
-    }
     getPilotId(){
         return this.CardID;
     }
