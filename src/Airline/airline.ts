@@ -18,9 +18,7 @@ export class Airlines{
     addEmployee(employee: Employee): void {
         this.employee.push(employee);
     }
-    addAeroplan(aeroplane:Aeroplanes){
-        return this.airplane.push(aeroplane)
-    }
+    
     
     addBooking(booking: Booking){
         return this.booking.push(booking)
@@ -54,14 +52,14 @@ export class Airlines{
             return numberOfPassenger
    }
 
-   findTypeMeal(booking: Booking):void{
+   findTypeMeal(booking: Booking){
         let listOfMeal = []
         for(let book of this.booking){
             if (book.getMeal()== booking.getMeal()) {
                 listOfMeal.push(booking.getMeal());
             }
         }
-        listOfMeal
+        return listOfMeal
    }
 }
 
